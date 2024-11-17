@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planning Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <header>
+        <h1>ASHWINI EVENT PLANNER</h1>
+        <p>We create memorable events designed to fit your unique budget and vision.</p>
+    </header>
+
+    <section id="calculator">
+        <h2>Event Budget Calculator</h2>
+        <form id="budgetForm">
+            <label for="eventType">Event Type:</label>
+            <select id="eventType">
+                <option value="wedding">Wedding</option>
+                <option value="birthday">Birthday</option>
+                <option value="corporate">Corporate Event</option>
+            </select>
+               <label for="eventDate">Event Date:</label>
+             <input type="date" id="eventDate" required>
+         <label for="MenuType">MenuType :</label>
+            <select id="MenuType">
+                <option value="IndianStyle">IndianStyle</option>
+                <option value="ItalianStyle">ItalianStyle</option>
+                <option value="ChineseStyle">ChineseStyle</option>
+                <option value="KoreonStyle">KoreonStyle</option>
+                <option value="AmericanStyle">AmericanStyle</option>
+            </select>
+
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" min="1" required>
+
+            <label for="venueCost">Venue Cost (AUD):</label>
+            <input type="number" id="venueCost" min="0" required>
+
+            <label for="cateringCost">Catering Cost per Person (AUD):</label>
+            <input type="number" id="cateringCost" min="0" required>
+
+            <label for="decorCost">Decoration Cost (AUD):</label>
+            <input type="number" id="decorCost" min="0" required>
+
+            <label for="otherCost">Other Costs (AUD):</label>
+            <input type="number" id="otherCost" min="0" required>
+
+            <button type="button" onclick="calculateBudget()">Calculate Total Budget</button>
+        </form>
+
+        <p id="totalCost"></p>
+    </section>
+
+    <section id="contact">
+        <h2>Book a Consultation</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" required>
+             
+            <label for="address">Address:</label>
+            <input type="address" id="Address" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2015 All Event Planning Services are available here. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
